@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Challenge 1 - Encriptador de texto</title>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="./files/imgs/Logo.png" alt="Logo de Alura">
+        </header>
+        <main>
+            <div class="input__panel">
+                <textarea class="text__area" placeholder="Ingrese el texto aquí"></textarea>    
+                  <div class="">
+                    <p>Solo letras minusculas y sin acentos.</p>
+                </div>
+                <div class="buttons">    
+                    <button class="btn-encrypt" type="button" onclick="encriptar()">Encriptar</button>
+                    <button class="btn-dencrypt" type="button" onclick="densencriptar()">Desencriptar</button>
+               </div>    
+            </div>
+            <div class="output__panel">
+                <div class="output__img  hide">
+                    <img src="./files/imgs/Muñeco.png" alt="figura ilustrativa">
+                </div>
+                <div class="output__message hide">
+                    <h3 class="message__title">Ningún mensaje fue encontrado</h3>
+                    <p class="message__text">Ingresa el texto que deseas encriptar o desencriptar.</p>
+                </div>
+        
+            
+        <footer>
+            <p>Desarrollado por Martin A. Rodriguez Ozta para Alura Latam - ONE</p>
+        </footer>
+    </body>
+</html>

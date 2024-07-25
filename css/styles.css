@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+ }
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: aqua;
+} 
+
+body {
+    background-color:#f3f5fc;
+    margin: 0;
+    padding: 0;
+    
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: space-between;
+        
+}
+
+.input__panel {
+    width: 55%;
+    height: 60%;
+    background-color: blue;
+    
+}
+
+.text__area {
+    resize: none;
+    width: 70%;
+    height: 60%;
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+    background-color: whitesmoke;
+    font-size: 25px;
+    color: black;
+
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 2%;
+
+}
+
+.btn-encrypt, .btn-dencrypt {
+    width: 25%;
+
+}
+
+.btn-encrypt {
+    
+
+}
+
+.btn-dencrypt {
+    
+}
+
+.output__panel {
+    
+    width: 40%;
+    background-color: white;
+    padding-top: 50px;
+    border-radius: 20px;
+    margin-right: 2%;
+    
+}
+
+.output__img {
+    margin: auto;
+    align-content: center;
+    width: 50%;
+    
+}
+
+.output__message {
+    width: 100%;
+    height: 30%;
+   
+    background-color: cadetblue;
+   
+}
+
+.message__title {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    background-color: white;
+}
+
+.message__text {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    background-color: beige;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: bisque;
+}
+
+.hide {
+    display: none;
+}
+
+
+
