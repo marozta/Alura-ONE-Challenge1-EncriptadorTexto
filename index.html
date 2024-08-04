@@ -5,34 +5,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Challenge 1 - Encriptador de texto</title>
         <link rel="stylesheet" href="./css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            <img src="./files/imgs/Logo.png" alt="Logo de Alura">
+            <img class="logo" src="./files/imgs/Logo.png" alt="Logo de Alura">
         </header>
         <main>
-            <div class="input__panel">
-                <textarea class="text__area" placeholder="Ingrese el texto aquí"></textarea>    
-                  <div class="">
-                    <p>Solo letras minusculas y sin acentos.</p>
-                </div>
-                <div class="buttons">    
+            <section class="input__panel">
+                <textarea class="text__input" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>    
+                <div class="btn__container"> 
+                    <div>
+                        <img class="alert__msg" src="./files/imgs/bi_exclamation-circle-fill.png" alt="logo mensaje alerta">
+                        <span>Solo letras minúsculas y sin acentos.</span>
+                    </div>
                     <button class="btn-encrypt" type="button" onclick="encriptar()">Encriptar</button>
                     <button class="btn-dencrypt" type="button" onclick="densencriptar()">Desencriptar</button>
-               </div>    
-            </div>
-            <div class="output__panel">
+                </div>    
+            </section>
+            <section class="output__panel">
                 <div class="output__img  hide">
                     <img src="./files/imgs/Muñeco.png" alt="figura ilustrativa">
                 </div>
                 <div class="output__message hide">
-                    <h3 class="message__title">Ningún mensaje fue encontrado</h3>
+                    <h5 class="message__title">Ningún mensaje fue encontrado</h5>
                     <p class="message__text">Ingresa el texto que deseas encriptar o desencriptar.</p>
                 </div>
-        
-            
+                <div class="copy__text">
+                    <button >copiar</button>
+                </div>
+            </section>
+        </main>    
         <footer>
-            <p>Desarrollado por Martin A. Rodriguez Ozta para Alura Latam - ONE</p>
+            <p>Desarrollado por Martin A. Rodriguez Ozta para el curso Principiante en Programación de Alura Latam - ONE</p>
         </footer>
     </body>
 </html>
