@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <title>Challenge 1 - Encriptador de texto</title>
-    </head>
-    <body>
-        <header>
-            <img class="logo" src="./files/imgs/Logo.png" alt="Logo de Alura">
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <main>
-            <!-- LADO IZQUIERDO -->
-            <section class="left__panel">
-                <textarea class="left__input" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>    
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Challenge 1 - Encriptador de texto</title>
+</head>
+<body>
+    <div class="total__container"></div>
+        <header class="header">
+                <a class="logo" href="http://www.aluracursos.com" target="_blank" rel="noopener noreferrer"><img class="logo" src="./img/logo.svg" alt="Logo de Alura"></a>
+        </header>
+        
+        <main class="main" >
+            <div class="left__panel">
+                <textarea class="text__input" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
                 <div class="left__container">
-                    <img class="alert__icon" src="./files/imgs/bi_exclamation-circle-fill.png" alt="Icono mensaje alerta">
-                    <p class="alert__msg">Solo letras minúsculas y sin acentos.</p>
+                        <img class="icon" src="./img/info.svg" alt="Icono mensaje de alerta">
+                        <p class="alert__msg" > Solo minusculas y sin acentos</p>
                 </div>
                 <div class="bts__container">
                     <button class="btn__encriptar" onclick="btnEncriptar()">Encriptar</button>
                     <button class="btn__desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
                 </div>
-            </section>
-
-            <!-- LADO DERECHO -->  
-            <section class="right__panel">
-                <div class="right__container">
-                    <img src="./files/imgs/Muñeco.png" class="image" alt="Figura ilustrativa"/>
-                    <p class="upper__msg">Ningún mensaje fue encontrado</p>
-                    <p class="lower__msg">Ingresa el texto que deseas encriptar o desencriptar.</p>
-                </div>
+            </div>
+            
+            <div class="right__panel">
                 <textarea class="text__output" cols="30" rows="10"></textarea>
-                <div>
-                    <button class="btn__copiar">Copiar</button>
+                <div class="right__container">
+                    <img class="image" src="./img/toy.svg" alt="Figura ilustrativa">
+                    <p class="upper__msg" >Ningún mensaje fue encontrado</p>
+                    <p class="lower__msg" >Ingresa el texto que deseas encriptar o desencriptar.</p>
                 </div>
-            </section>
+                <div class="copy__container">
+                    <button class="btn__copiar" onclick="btnCopiar()">Copiar</button>
+                </div>
+            </div>
         </main>
 
         <footer>
-            <p>Desarrollado por Martin A. Rodriguez Ozta para Alura Latam - ONE (2024)</p>
+            <p class="footer" >Creado por Martín A. Rodriguez Ozta - Alura Latam - ONE (G7 - 2024)</p>
         </footer>
-        <script src="./index.js"></script>
-    </body>
+    </div>
+    <script src="./script.js"></script>
+</body>
 </html>

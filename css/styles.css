@@ -1,121 +1,150 @@
-:root {
-    
-    --lightblue100: #F3F5FC;
-    --darkblue300: #0A3871;
-    --blue-custom: #0a38718a;
-    --gray400: #495057;
-    --gray500: #343A40;
-    --graycustom: #D8DFE8;
-    --graymedium: #67808E;
-    --shadow: #E5E5E5;
-    --RGBAbts: #ff0202;
-    --white: #FFFFFF;
-    
-}
-
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     font-style: normal;
-    /* font-size: 32px; */
+    font-size: 32px;
     font-weight: 400;
     line-height: 150%;
-    background: var(--lightblue100);
+    background: var(--background);
+    
+
 }
 
-body {
+:root {
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+
+    --light-blue-100:#F3F5FC;
+    --light-blue-200:#EFF1FA;
+    --light-blue-300:#E9ECF8;
+    --light-blue-400:#AAB2D5;
+    --light-blue-500:#F3F5FC;
+
+    --gray-100:#CED4DA;
+    --gray-200:#ADB5BD;
+    --gray-300:#868E96;
+    --gray-400:#495057;
+    --gray-500:#343A40;
+    --gray-custom: #D8DFE8;
+
+    --background: var(--light-blue-100);
+    --white:#FFFFFF;
+    --shadow: #000000;
+}
+
+.total__container {
+    width: 100%;
+    max-width: 90rem;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-img {
-    max-width: 100%;
-}
-
-header {
-    position: absolute;
-    margin: 40px 0px 0px 40px;
+.header {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: self-start;
+    width: 30%;
 }
 
 .logo {
+    width: 2rem;
     display: flex;
     align-items: flex-start;
-    width: 120px;
-    height: 48px;
+    margin: 0rem 0 0 1.5rem;
 }
 
-main {
+.main {
     display: flex;
     flex-direction: row;
-}
+    align-items: flex-start;
+    justify-content: space-evenly;
+    /* height: calc(100vh - 100px); */
+} 
 
-/* ------------------- PANEL IZQUIERDO --------------------*/
+/* - - - - - - - - - - - - - - - LADO IZQUIERDO - - - - - - - - - - - - - - - */
 
 .left__panel {
-    width: 60%;
-    margin: 168px 10px 0px 140px; /*revisar estos margenes, el derecho debe ser 0*/
-    
-}
 
-.left__input {
-    width: 600px;
-    height: 288px;
-    outline: none; /*revisar que es outline*/
-    border: none;
-    border-radius: ; /*revisar si va*/
-    resize: none;
-}
+        width: 100%;
+        max-width: 680px;
+        height: 100%;
+        max-height:500px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        margin: 0rem 1rem 0 1rem; 
+    }
 
-.left__input::placeholder, :focus {
+
+.text__input {
+ 
+    max-width: 680px;
+    width: 100%;
+    max-height: 12rem;
+
     font-size: 32px;
-    color: var(--darkblue300); 
+    resize: none;
+    border: none; 
 }
+
+.text__input:focus {
+    outline: none
+}
+
+.text__input::placeholder, :focus {
+    color: var(--dark-blue-300);
+   
+}
+
 
 .left__container {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    position: absolute;
-    top: 500px;
+    justify-content: flex-start;
+    padding: 5px;
+    gap: 5px;
 }
 
-.alert__icon {
-    
-}
 
-.alert__msg {
-    width: 100%;
+
+.alert__msg{
+
     font-size: 12px;
-    color: var(--gray400);
+    color: var(--gray-400);
 }
 
 .bts__container {
-   display: flex;
-   flex-direction: row;
-   align-items: flex-start;
-   gap: 24px;
-   position: absolute;
-   top: 526px;
-   margin-top: 12px;
-}
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+   }
 
 .btn__encriptar {
-    width: 328px;   /* revisar valor en el FIGMA*/
+    width: 328px;
     height: 67px;
     padding: 24px;
     font-size: 16px;
     line-height: 120%;
     text-align: center;
     color: var(--white);
-    background: var(--darkblue300);
-    border: 1px solid var(--darkblue300);
+    background: var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-300);
     border-radius: 24px;
     cursor: pointer;
-    box-shadow: 0px 10px 10px -8px #000;
+    box-shadow: 0px 10px 10px -8px var(--shadow);
 }
-
 
 .btn__encriptar:active {
     box-shadow: inset 2px 2px 4px var(--shadow),
@@ -124,108 +153,333 @@ main {
 }
 
 .btn__desencriptar {
-    width: 328px;   /* revisar valor en el FIGMA*/
+    width: 328px;
     height: 67px;
-    padding: 24ps;
+    padding: 24px;
     font-size: 16px;
     line-height: 120%;
     text-align: center;
-    color: var(--darkblue300);
-    background: var(--graycustom);
-    border: 1px solid var(--darkblue300);
+    color: var(--dark-blue-300);
+    background: var(--gray-custom);
+    border: 1px solid var(--dark-blue-300);
     border-radius: 24px;
     cursor: pointer;
-    box-shadow: 0px 10px 10px -8px #000;
+    box-shadow: 0px 10px 10px -8px var(--shadow);
 }
 
 .btn__desencriptar:active {
     box-shadow: inset 2px 2px 4px var(--darkblue300),
     inset -3px -4px 8px var(--shadow);
     color: var(--blue-custom);
+    font-weight: bold;
 }
 
 
 
-/* ------------------- PANEL DERECHO --------------------*/
+/* - - - - - - - - - - - - - - - LADO DERECHO - - - - - - - - - - - - - - - */
+
 .right__panel {
-    width: 300px;
-    height: 588px;
-    background: var(--white); /* revisar */
-    box-shadow: 10px 24px 32px -8px var(--gray500);
-    position: relative;
-    margin-top: 40px;
+
+    max-width: 11rem;
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--white);
     border-radius: 32px;
     text-align: center;
-}
-
-.right__container {
-    width: 250px;
-    margin: auto;
-    margin-top: 50%;
-    background: var(--white);
-}
-
-.image {
-    background: var(--white);
-}
-
-.upper__msg {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 120%;
-    text-align: center;
-    color: var(--gray500);
-    background: var(--white);
-    margin-bottom: 8px;
-}
-
-.lower__msg {
-    font-size: 12px;
-    text-align: center;
-    color: var(--gray500);
-    background: var(--white);
+    box-shadow: 0px 24px 32px -8px var(--gray-300)   
 }
 
 .text__output {
     width: 100%;
-    height: 485px;
-    position: absolute;
-    padding: 20px;
-    top: 0;
-    left: 0;
-    font-size: 24px;
-    color: var(--gray400);
-    background: transparent;
+    padding: 0 6px;
+    height: 85px;
+    resize: none;
     border-top-right-radius: 32px;
     border-top-left-radius: 32px;
-    border: none;
-    resize: none; 
+    visibility: hidden;
+}
+
+.right__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 11rem;
+    width: 100%;
+    background: transparent;
+
+}
+
+.image {
+    max-width: 7rem;
+    height: auto;
+    background: var(--white);
+}
+
+.upper__msg {
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+    color: var(--gray-500);
+    background: transparent;
+    max-width: 275px;
+    width: 100%;
+    margin: 10px
+}
+
+.lower__msg {
+
+    font-size: 16px;
+    text-align: center;
+    color: var(--gray-500);
+    background: transparent;
+    max-width: 300px;
+    width: 100%;
+}
+
+.copy__container {
+    background: var(--white);
+    border-bottom-left-radius: 32px ;
+    border-bottom-right-radius: 32px ;
 }
 
 .btn__copiar {
-    width: 300px;   /* revisar valor en el FIGMA*/
+    width: 336px;
     height: 67px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 24px;
     font-size: 16px;
-    line-height: auto;
     text-align: center;
-    color: var(--darkblue300);
-    background: transparent;
-    border: 1px solid var(--darkblue300);
+    color: var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-300);
+    background: var(--white);
     border-radius: 24px;
     cursor: pointer;
+    box-shadow: 0px 10px 10px -8px var(--shadow);
     /* visibility: hidden; */
-    }
+}
 
-    footer {
-        margin-top: 10px;
+.btn__copiar:active {
+    box-shadow: inset 2px 2px 4px var(--darkblue300),
+    inset -3px -4px 8px var(--shadow);
+    color: var(--blue-custom);
+}
+
+/* - - - - - - - - - - - - - - - FOOTER - - - - - - - - - - - - - - - */
+
+.footer {
+    font-size: 16px;
+    color: var(--gray-300);
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+/* - - - - - - - - - - - - - - - RESPONSIVE - - - - - - - - - - - - - - - */
+/* TABLET */
+
+@media (max-width: 960px) {
+
+    .total__container {
         width: 100%;
-        font-size: 16px;
-        text-align: center;
-        color: var(--darkblue300);
-    
+        flex-direction: column;
+        justify-content: center;
     }
 
+    .logo {
+        margin: 0.5rem 0 0 0.5rem;
+
+    }
+
+    .main {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+
+    }
+
+    .left__panel {
+        max-width: 680px;
+        width: 100%;
+        max-height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem auto 0 auto;
+    }
+
+    .text__input {
+        margin: 1.5rem 0 0 0 ;
+        min-height: 15rem;
+    }
+
+    .bts__container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .btn__encriptar, .btn__desencriptar{
+        max-width: 332px;
+    }
+
+    .right__panel {
+        max-width: 680px;
+        margin: 1rem auto 0 auto;
+    }
+
+    .right__container, .upper__msg, .lower__msg {
+        min-width: 100% ;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .text__output {
+        margin: 0 0 2rem 0;
+    }
+
+    .copy__container {
+
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .btn__copiar {
+        max-width: 624px;
+        width: 100%;
+    }
+}
+
+/* - - - - - - - - - - - - - - - RESPONSIVE - - - - - - - - - - - - - - - */
+/* CEL */
+
+
+@media (max-width: 500px) {
+
+.bts__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left__panel {
+    margin: 0 auto;
+}
+
+.right__container {
+    max-width: 500px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* - - - - - - - - - - - - - - - RESPONSIVE - - - - - - - - - - - - - - - */
+/* TABLET */
+
+/*
+@media (max-width: 1000px) {
+
+    .logo {
+        margin: 1.5rem 0 0 1rem;
+
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        margin: auto;
+        background-color: red;
+
+        }
+
+    .left__panel {
+        max-width: 100%;
+        margin-bottom: 2rem;
+        background-color: antiquewhite;
+
+    }
+
+    .text__input {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .left__container {
+        margin-right: auto;
+    }
+    
+
+
+    .bts__container {
+        margin-right: auto;
+    }
+
+
+
+    .right__panel {
+        min-width: 680px;
+        height: 113px;
+        background-color: var(--white);
+        margin-left: 1rem;
+       
+    }
+
+    .image {
+        display: none;
+    }
+
+    .right__container {
+        margin: auto;
+    }
+
+    .upper__msg {
+        min-width: 680px;
+    }
+
+    .lower__msg {
+        min-width: 680px;
+    }
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+
+.bts__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+}
+}

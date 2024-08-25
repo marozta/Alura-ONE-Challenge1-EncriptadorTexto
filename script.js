@@ -1,19 +1,17 @@
-const textarea = document.querySelector(".text-area");
-const mensaje = document.querySelector(".mensaje");
-
+const textarea = document.querySelector(".text__input");
+const mensaje = document.querySelector(".text__output");
 
 function btnEncriptar() {
     const textoEncriptado = encriptar(textarea.value)
     mensaje.value = textoEncriptado
-    textarea.value = ""
-    mensaje.style.backgroundImage = "none"
+    textarea.value = "";
+    mensaje.style.backgroundImage = "none";
 }
 
 function btnDesencriptar() {
     const textoEncriptado = desencriptar(textarea.value)
     mensaje.value = textoEncriptado
     textarea.value = ""
-    
 }
 
 function encriptar(stringEncriptada) {
@@ -39,3 +37,10 @@ function desencriptar(stringDesencriptada) {
     }
     return stringDesencriptada;
 }
+
+function btnCopiar() {
+     var contenido = document.querySelector(".text__output");
+     contenido.select();
+     document.execCommand("cut");
+}
+
