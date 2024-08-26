@@ -179,10 +179,9 @@
 /* - - - - - - - - - - - - - - - LADO DERECHO - - - - - - - - - - - - - - - */
 
 .right__panel {
-
     max-width: 11rem;
     width: 100%;
-    max-height: 100%;
+    min-height: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,8 +201,7 @@
     outline: none;
     border-top-right-radius: 32px;
     border-top-left-radius: 32px;
-   
-    visibility: hidden;
+    display: none;
 }
 
 .right__container {
@@ -213,17 +211,16 @@
     max-width: 11rem;
     width: 100%;
     background: transparent;
-
 }
 
 .image {
+    margin-top: 2rem;
     max-width: 7rem;
     height: auto;
     background: var(--white);
 }
 
 .upper__msg {
-
     font-size: 24px;
     font-weight: 700;
     line-height: 120%;
@@ -236,7 +233,6 @@
 }
 
 .lower__msg {
-
     font-size: 16px;
     text-align: center;
     color: var(--gray-500);
@@ -262,7 +258,7 @@
     border-radius: 24px;
     cursor: pointer;
     box-shadow: 0px 10px 10px -8px var(--shadow);
-   
+    text-shadow: 0px 4px 4px var(--gray-300);
     visibility: hidden;
 }
 

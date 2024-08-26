@@ -1,29 +1,53 @@
 const textarea = document.querySelector(".text__input");
 const mensaje = document.querySelector(".text__output");
+const pattern = /[A-Záéíú]/;
 
 function btnEncriptar() {
-    const texto = textarea.value.toLowerCase()
-    const textoEncriptado = encriptar(texto)
-    mensaje.value = textoEncriptado
-    textarea.value = "";
-    document.querySelector(".text__output").style.visibility = "visible"
-    document.querySelector(".image").style.visibility = "hidden"
-    document.querySelector(".upper__msg").style.visibility = "hidden"
-    document.querySelector(".lower__msg").style.visibility = "hidden"
-    document.querySelector(".btn__copiar").style.visibility = "visible"
-    
+
+    if (pattern.test(textarea.value) == true){
+        alert("El texto contiene caracteres invalidos");
+        textarea.value = "";
+        return;
+
+    } if (textarea.value == '') {
+        alert("No ingresó ningún texto");
+
+    } else {
+        const texto = textarea.value.toLowerCase()
+        const textoEncriptado = encriptar(texto)
+        mensaje.value = textoEncriptado
+        textarea.value = "";
+        document.querySelector(".text__output").style.height = "400px"
+        document.querySelector(".text__output").style.display = "inline-flex"
+        document.querySelector(".image").style.display = "none"
+        document.querySelector(".upper__msg").style.display = "none"
+        document.querySelector(".lower__msg").style.display = "none"
+        document.querySelector(".btn__copiar").style.visibility = "visible"
+    }   
 }
 
 function btnDesencriptar() {
-    const texto = textarea.value.toLowerCase()
-    const textoEncriptado = desencriptar(texto)
-    mensaje.value = textoEncriptado
-    textarea.value = ""
-    document.querySelector(".text__output").style.visibility = "visible"
-    document.querySelector(".image").style.visibility = "hidden"
-    document.querySelector(".upper__msg").style.visibility = "hidden"
-    document.querySelector(".lower__msg").style.visibility = "hidden"
-    document.querySelector(".btn__copiar").style.visibility = "visible"
+
+    if (pattern.test(textarea.value) == true){
+        alert("El texto contiene caracteres invalidos");
+        textarea.value = "";
+        return;
+
+    } if (textarea.value == '') {
+        alert("No ingresó ningún texto");
+
+    } else {
+        const texto = textarea.value.toLowerCase()
+        const textoEncriptado = desencriptar(texto)
+        mensaje.value = textoEncriptado
+        textarea.value = ""
+        document.querySelector(".text__output").style.height = "400px"
+        document.querySelector(".text__output").style.display = "inline-block"
+        document.querySelector(".image").style.display = "none"
+        document.querySelector(".upper__msg").style.display = "none"
+        document.querySelector(".lower__msg").style.display = "none"
+        document.querySelector(".btn__copiar").style.visibility = "visible"
+        }
 }
 
 function encriptar(stringEncriptada) {
@@ -54,9 +78,10 @@ function btnCopiar() {
     var contenido = document.querySelector(".text__output");
     contenido.select();
     document.execCommand("cut");
-    document.querySelector(".image").style.visibility = "visible"
-    document.querySelector(".upper__msg").style.visibility = "visible"
-    document.querySelector(".lower__msg").style.visibility = "visible"
+    document.querySelector(".text__output").style.display = "none"
+    document.querySelector(".image").style.display = "initial"
+    document.querySelector(".upper__msg").style.display = "initial"
+    document.querySelector(".lower__msg").style.display = "initial"
     document.querySelector(".btn__copiar").style.visibility = "hidden"
 }
 
