@@ -196,9 +196,13 @@
     width: 100%;
     padding: 0 6px;
     height: 85px;
+    background: var(--white);
     resize: none;
+    border: none;
+    outline: none;
     border-top-right-radius: 32px;
     border-top-left-radius: 32px;
+   
     visibility: hidden;
 }
 
@@ -258,7 +262,8 @@
     border-radius: 24px;
     cursor: pointer;
     box-shadow: 0px 10px 10px -8px var(--shadow);
-    /* visibility: hidden; */
+   
+    visibility: hidden;
 }
 
 .btn__copiar:active {

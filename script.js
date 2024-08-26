@@ -2,16 +2,28 @@ const textarea = document.querySelector(".text__input");
 const mensaje = document.querySelector(".text__output");
 
 function btnEncriptar() {
-    const textoEncriptado = encriptar(textarea.value)
+    const texto = textarea.value.toLowerCase()
+    const textoEncriptado = encriptar(texto)
     mensaje.value = textoEncriptado
     textarea.value = "";
-    mensaje.style.backgroundImage = "none";
+    document.querySelector(".text__output").style.visibility = "visible"
+    document.querySelector(".image").style.visibility = "hidden"
+    document.querySelector(".upper__msg").style.visibility = "hidden"
+    document.querySelector(".lower__msg").style.visibility = "hidden"
+    document.querySelector(".btn__copiar").style.visibility = "visible"
+    
 }
 
 function btnDesencriptar() {
-    const textoEncriptado = desencriptar(textarea.value)
+    const texto = textarea.value.toLowerCase()
+    const textoEncriptado = desencriptar(texto)
     mensaje.value = textoEncriptado
     textarea.value = ""
+    document.querySelector(".text__output").style.visibility = "visible"
+    document.querySelector(".image").style.visibility = "hidden"
+    document.querySelector(".upper__msg").style.visibility = "hidden"
+    document.querySelector(".lower__msg").style.visibility = "hidden"
+    document.querySelector(".btn__copiar").style.visibility = "visible"
 }
 
 function encriptar(stringEncriptada) {
@@ -39,8 +51,12 @@ function desencriptar(stringDesencriptada) {
 }
 
 function btnCopiar() {
-     var contenido = document.querySelector(".text__output");
-     contenido.select();
-     document.execCommand("cut");
+    var contenido = document.querySelector(".text__output");
+    contenido.select();
+    document.execCommand("cut");
+    document.querySelector(".image").style.visibility = "visible"
+    document.querySelector(".upper__msg").style.visibility = "visible"
+    document.querySelector(".lower__msg").style.visibility = "visible"
+    document.querySelector(".btn__copiar").style.visibility = "hidden"
 }
 
